@@ -1,1 +1,1 @@
-1 -
+1 - Se vc precisar escrever o mesmo codigo duas vezes, repense sua logica (crie uma funcao).
