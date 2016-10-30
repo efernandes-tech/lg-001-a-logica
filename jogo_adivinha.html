@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<script>
+
+function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+
+var numeroPensadoComCasasDecimais = Math.random() * 10;
+var numeroPensado = Math.round(numeroPensadoComCasasDecimais);
+
+var chute = prompt("Já pensei. Qual você acha que é?");
+if(chute == numeroPensado) {
+    mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+} else {
+    mostra("Você errou! Eu tinha pensado no " + numeroPensado);
+}
+
+</script>
