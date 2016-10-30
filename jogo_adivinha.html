@@ -11,14 +11,26 @@ function mostra(frase) {
     pulaLinha();
 }
 
-var numeroPensadoComCasasDecimais = Math.random() * 10;
-var numeroPensado = Math.round(numeroPensadoComCasasDecimais);
+function sorteia(n) {
+    return Math.round(Math.random() * n);
+}
+
+// var numeroPensadoComCasasDecimais = Math.random() * 100;
+// var numeroPensado = Math.round(numeroPensadoComCasasDecimais);
+var numeroPensado = sorteia(10);
 
 var chute = prompt("Já pensei. Qual você acha que é?");
 if(chute == numeroPensado) {
     mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
 } else {
     mostra("Você errou! Eu tinha pensado no " + numeroPensado);
+
+    if(chute > numeroPensado) {
+        mostra("O número que você chutou é maior que o número pensado.");
+    } else {
+        mostra("O número que você chutou é menor que o número pensado.");
+    }
 }
+
 
 </script>
