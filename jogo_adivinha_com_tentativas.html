@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<script>
+
+function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+
+function sorteia(n) {
+    return Math.round(Math.random() * n);
+}
+
+// var numeroPensadoComCasasDecimais = Math.random() * 100;
+// var numeroPensado = Math.round(numeroPensadoComCasasDecimais);
+var numeroPensado = sorteia(10);
+
+var numeroDaTentativa = 1;
+while(numeroDaTentativa <= 3) {
+    var chute = prompt("Qual você acha que é?");
+
+    if(chute == numeroPensado) {
+        alert("Parabéns, você acertou!");
+        break;
+    } else {
+        alert("Você errou. Será que ainda tem mais tentativas?");
+    }
+
+    numeroDaTentativa++;
+}
+
+</script>
