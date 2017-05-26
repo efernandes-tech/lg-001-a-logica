@@ -12,9 +12,21 @@ var desenhaQuadradoVerde = function(x,y) {
     c.strokeRect(x, y, 50, 50);
 };
 
-var x = 0;
-while(x < 600) {
+var desenhaQuadradoVermelho = function(x,y) {
+    var tela = document.getElementById("tela");
+    var c = tela.getContext("2d");
+
+    c.fillStyle="red";
+    c.fillRect(x, y, 50, 50);
+
+    c.strokeStyle="black";
+    c.strokeRect(x, y, 50, 50);
+};
+
+for(var x = 0; x < 600; x = x + 50) {
     desenhaQuadradoVerde(x, 0);
-    x = x + 50;
+}
+for(var x = 0; x < 600; x = x + 50) {
+    desenhaQuadradoVermelho(x, 50);
 }
 </script>
