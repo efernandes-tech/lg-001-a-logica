@@ -23,8 +23,20 @@ var desenhaQuadradoVermelho = function(x,y) {
     c.strokeRect(x, y, 50, 50);
 };
 
+var desenhaBolaAzul = function(x,y) {
+	var tela = document.getElementById("tela");
+    var pincel = tela.getContext("2d");
+
+    pincel.fillStyle="blue";
+	pincel.beginPath();
+	var raio = 25;
+	pincel.arc(x, y, raio, 0, 2*Math.PI);
+	pincel.fill();
+}
+
 for(var x = 0; x < 600; x = x + 50) {
     desenhaQuadradoVerde(x, 0);
     desenhaQuadradoVermelho(x, 50);
+    desenhaBolaAzul(x,100);
 }
 </script>
