@@ -7,7 +7,9 @@ var c = tela.getContext("2d");
 c.fillStyle="gray";
 c.fillRect(0, 0, 600, 400);
 
-var desenhaCirculo = function(mouseEvent) {
+var desenhaCirculoAzul = function(mouseEvent) {
+    console.log("botao esquerdo");
+
     // Posicao da pagina menos a posicao do canvas na tela.
     var x = mouseEvent.pageX - tela.offsetLeft;
     var y = mouseEvent.pageY - tela.offsetTop;
@@ -20,5 +22,25 @@ var desenhaCirculo = function(mouseEvent) {
     console.log("posição do clique : " + x + ", " + y);
 };
 
-tela.onclick = desenhaCirculo;
+var desenhaCirculoVermelho = function(mouseEvent) {
+    console.log("botao direito");
+
+    // Não abre a janelinha padrao do browser.
+    mouseEvent.preventDefault();
+
+    // Posicao da pagina menos a posicao do canvas na tela.
+    var x = mouseEvent.pageX - tela.offsetLeft;
+    var y = mouseEvent.pageY - tela.offsetTop;
+
+    c.fillStyle="red";
+    c.beginPath();
+    c.arc(x, y, 10, 0, 2*3.14);
+    c.fill();
+
+    console.log("posição do clique : " + x + ", " + y);
+};
+
+tela.onclick = desenhaCirculoAzul;
+
+tela.oncontextmenu = desenhaCirculoVermelho;
 </script>
