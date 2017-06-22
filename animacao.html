@@ -4,6 +4,13 @@
 var tela = document.getElementById("tela");
 var c = tela.getContext("2d");
 
+var imagem = new Image();
+imagem.src = "https://scontent.fpoa7-2.fna.fbcdn.net/v/t1.0-1/p200x200/11059530_844452928941605_4306844400129258271_n.jpg?oh=8e268082cb4e3e8a1e47a86310955111&oe=59E534EE";
+
+var desenhaImagem = function(x, y) {
+    c.drawImage(imagem, x, y)
+};
+
 var circulo = function(x, y, raio) {
     // c.fillStyle = "blue";
     c.strokeStyle = "blue";
@@ -22,7 +29,8 @@ var x = 1;
 var desenha = function() {
     // limpaTela();
     // circulo(x, 100, 10);
-    circulo(x, 100, x/2);
+    // circulo(x, 100, x/2);
+    desenhaImagem(x, 30);
     x = x + 1;
 };
 
