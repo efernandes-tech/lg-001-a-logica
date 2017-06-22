@@ -5,10 +5,12 @@ var tela = document.getElementById("tela");
 var c = tela.getContext("2d");
 
 var circulo = function(x, y, raio) {
-    c.fillStyle = "blue";
+    // c.fillStyle = "blue";
+    c.strokeStyle = "blue";
     c.beginPath();
     c.arc(x, y, raio, 0, 2*Math.PI);
-    c.fill();
+    // c.fill();
+    c.stroke();
 };
 
 var limpaTela = function() {
@@ -18,8 +20,9 @@ var limpaTela = function() {
 var x = 1;
 
 var desenha = function() {
-    limpaTela();
-    circulo(x, 100, 10);
+    // limpaTela();
+    // circulo(x, 100, 10);
+    circulo(x, 100, x/2);
     x = x + 1;
 };
 
