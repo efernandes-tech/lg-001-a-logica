@@ -1,3 +1,3 @@
 # lg-001-a-logica
 
-Testando a lógica. (projeto prático)
+Testando a lógica.
